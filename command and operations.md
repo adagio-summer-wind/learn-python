@@ -1,8 +1,12 @@
 # 基础操作及命令
 
-## 文件操作
+目录
+## 1、文件操作
+###   1.1打开文件（写入和读取）
+## 2、类class
 
-### 打开文件
+## 1、文件操作
+###   1.1打开文件
 1、向打开的文件写入
 ```python
 text = 'This is my first test.\nThis is the second line.'
@@ -38,4 +42,39 @@ file.close()
 file = open('my file.txt','r')
 content = file.readlines()
 print(content)
+```
+
+## 2、类class
+###   2.1 类的定义
+```python
+class Calculator:                 # syntax:   class classname:
+  name = 'Good calculator'        #              define 类的属性
+  price = 18
+                                  #              define functions
+  def add(self,x,y):              #              def functionName1(self,parameter1,……，parameterN):
+     print(self.name)             #                 具体内容
+     result = x + y               #                 以 “self.属性名” 的形式在函数内部调用定义的属性
+     print(result)  
+  def minus(self,x,y):            #              def functionName2(self,parameter1,……，parameterN):
+     result = x - y               #                  具体内容
+     print(result)
+  def times(self,x,y):
+     result = x * y
+     print(result)
+  def divide(self,x,y):
+     result = x / y
+     print(result)
+```
+###   2.2 类的使用
+```python
+cal = Calculator()      #Calculator()中的（）不能省略
+print(cal.name)
+cal.add(7,9)
+```
+```python
+cal1 = Calculator
+cal2 = Calculator()
+print(cal1,cal2)
+# 输出：<class '__main__.Calculator'> <__main__.Calculator object at 0x00000265B798FD88>
+# 一个是类的名称，另一个是该类对象
 ```
