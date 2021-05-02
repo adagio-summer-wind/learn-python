@@ -2,11 +2,13 @@
 
 目录
 ## 1、文件操作
-###   1.1打开文件（写入和读取）
+### >1.1打开文件（写入和读取）
 ## 2、类class
+### >2.1 类的定义
+### >2.2 类的使用
 
 ## 1、文件操作
-###   1.1打开文件
+### >1.1打开文件
 1、向打开的文件写入
 ```python
 text = 'This is my first test.\nThis is the second line.'
@@ -45,7 +47,7 @@ print(content)
 ```
 
 ## 2、类class
-###   2.1 类的定义
+### >2.1 类的定义
 ```python
 class Calculator:                 # syntax:   class classname:
   name = 'Good calculator'        #              define 类的属性
@@ -65,7 +67,7 @@ class Calculator:                 # syntax:   class classname:
      result = x / y
      print(result)
 ```
-###   2.2 类的使用
+### >2.2 类的使用
 ```python
 cal = Calculator()      #Calculator()中的（）不能省略
 print(cal.name)
