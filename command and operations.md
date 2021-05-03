@@ -7,6 +7,7 @@
 ### >2.1 类的定义
 ### >2.2 类的使用
 ### >2.3 类
+## 3、元组（tuple） 列表（list）
 
 ## 1、文件操作
 ### >1.1打开文件
@@ -95,3 +96,20 @@ class Calculator:
 >>> c.w
 3
 ```
+## 3、元组（tuple） 列表（list）
+```python
+a_tuple = (56,47,2,9)
+a_list = [47,55,33]
+
+for index in range(len(a_tuple)):
+    print('index:',index, 'a_tuple[index]:',a_tuple[index])
+
+    
+for i in range(len(a_list)):
+    print('index:',i, 'a_list[i]:',a_list[i])
+```
+
+元组和列表的区别？？？  
+定义：
+>元组使用（）  
+>列表使用 []
