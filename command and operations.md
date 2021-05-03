@@ -6,6 +6,7 @@
 ## 2、类class
 ### >2.1 类的定义
 ### >2.2 类的使用
+### >2.3 类
 
 ## 1、文件操作
 ### >1.1打开文件
@@ -79,4 +80,18 @@ cal2 = Calculator()
 print(cal1,cal2)
 # 输出：<class '__main__.Calculator'> <__main__.Calculator object at 0x00000265B798FD88>
 # 一个是类的名称，另一个是该类对象
+```
+### >2.3 类init
+```python
+class Calculator:                    
+    def __init__(self,name,price,hight=18,width=8):
+        self.name = name
+        self.p = price
+        self.hight = hight
+        self.w = width  
+```
+```python
+ c = Calculator('calculator', 10, width = 3)
+>>> c.w
+3
 ```
