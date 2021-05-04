@@ -12,6 +12,8 @@
 ### >3.2 操作
 ### >3.3 多维数组
 ## 4、dictionary
+## 5、import
+## 6、错误处理try  
 
 ## 1、文件操作
 ### >1.1打开文件
@@ -185,4 +187,40 @@ print(d)
 a function
 {'apple': 1, 'orange': 3}
 {'apple': 1, 'orange': 3, 4: 'four'}
+```
+
+## 5、import
+```python
+import time
+print(time.localtime())
+```
+```python
+import time as t
+print(t.localtime())
+```
+```python
+from time import time, localtime
+print(time())
+print(localtime())
+```
+```python
+from time import*
+print(time())
+print(localtime())
+print(gmtime())
+```
+## 6、错误处理try  
+```python
+try:
+    file = open('ssdf', 'r+')
+except Exception as e:
+    print(e)
+    response = input('do you want to create a new file(y/n):')
+    if response == 'y':
+        file = open('ssdf','w')
+    else:
+        pass
+else:
+    file.write('eee')
+file.close()    
 ```
