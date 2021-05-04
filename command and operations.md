@@ -11,6 +11,8 @@
 ### >3.1 定义
 ### >3.2 操作
 ### >3.3 多维数组
+## 4、dictionary
+
 ## 1、文件操作
 ### >1.1打开文件
 1、向打开的文件写入
@@ -158,3 +160,29 @@ multi_a = [[1,2,3],
 print(multi_a[1][1])           
 ```
 更多使用见numpy库的使用
+
+## 4、dictionary
+```python
+def function():
+    print('a function')
+
+d = {'apple':1,'pear':2, 'orange':3 }
+d2 = {1:[1,2,3], 2:{1:'one', 2:'two', 3:'three'}, 'f':function}
+
+print(d['pear'])
+print(d2[1], d2[2])
+
+d2['f']()
+
+del d['pear']
+print(d)
+d[4] = 'four'
+print(d)
+
+>>>
+2
+[1, 2, 3] {1: 'one', 2: 'two', 3: 'three'}
+a function
+{'apple': 1, 'orange': 3}
+{'apple': 1, 'orange': 3, 4: 'four'}
+```
