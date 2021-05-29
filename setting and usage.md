@@ -36,6 +36,50 @@
 方式三：<br>
 >直接双击文件
 
+# cmd窗口常用指令
+```cmd
+# 系统
+
+# 查看已安装的python版本
+py --version
+py -V
+
+# 查看已安装的pip版本
+py -m pip --version
+
+# 从标准库中引导pip
+py -m ensurepip --default-pip
+
+# 安装更新pip
+python get-pip.py   # 会同时安装setuptools和wheel
+python get-pip.py --prefix=/usr/local/  # 安装到指定位置
+python3 -m pip install --upgrade pip setuptools wheel # 安装和更新pip
+```
+
+## Virtual Environment<br>
+It have their own installation directories and they don’t share libraries with other virtual environments.
+```cmd
+py -m venv tutorial_env
+tutorial_env\Scripts\activate    # 在tutorial_env中创建一个新的virtual environment,
+                                 # 并将其设置为当前窗口的默认python环境
+
+# 使用venv
+py -m venv <DIR>
+<DIR>\Scripts\activate
+# 使用virtualenv
+virtualenv <DIR>
+<DIR>\Scripts\activate
+```
+## 使用pip安装python package
+```cmd
+py -m pip install "SomeProject"
+py -m pip install "SomeProject==1.4"
+py -m pip install "SomeProject>=1,<2"
+py -m pip install "SomeProject~=1.4.2"
+
+py -m pip install --upgrade SomeProject  # 更新升级package
+```
+
 # How to install a modules
   关键点：命令提示符窗口的使用方式
   
