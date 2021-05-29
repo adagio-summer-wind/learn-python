@@ -1,3 +1,25 @@
+对于Windows系统
+# 使用python编译环境
+1、IDLE<br>
+2、python 命令提示符窗口<br>
+方式一：<br>
+>直接使用python自带的命令提示符窗口
+
+方式二：<br>
+>从系统Command Prompt进入<br>
+>查询已经安装的python版本<br>
+>```
+>python -V
+>```
+>进入python编译器环境<br>
+>```
+>python
+>```
+>退出python编译环境，返回系统Command Prompt<br>
+>按`Ctrl+Z`, 然后`ENTER` 
+>或者使用`exit()`命令
+
+
 # How to install a modules
   关键点：命令提示符窗口的使用方式
   
