@@ -55,3 +55,41 @@ print(scores.get('王五',100))
 >>> print(scores.get('马六',100))   # 如果不存在，将默认值设为100
 100
 ```
+## 3、修改、删除字典元素
+```python
+scores = {'张三':98, '李四':78, '王五':89}
+# 修改
+scores['张三'] = 77
+# 删除
+del scores['李四']   # 删除特定元素
+
+scores.clear()    # 清空字典
+```
+## 4、获取字典视图
+```python
+scores = {'张三':98, '李四':78, '王五':89}
+
+>>> keys = scores.key()             # 获取字典的key
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'key'
+>>> keys = scores.keys()
+>>> print(keys)
+dict_keys(['张三', '李四', '王五'])
+>>> print(type(keys))
+<class 'dict_keys'>
+>>> print(list(keys))
+['张三', '李四', '王五']
+
+>>> values = scores.values()        # 获取字典的values
+>>> print(values)
+dict_values([98, 78, 89])
+>>> print(type(values))
+<class 'dict_values'>
+
+>>> items = scores.items()           # 获取字典的key-value对
+>>> print(items)
+dict_items([('张三', 98), ('李四', 78), ('王五', 89)])
+>>> print(type(items))
+<class 'dict_items'>
+```
