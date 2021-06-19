@@ -8,6 +8,8 @@ dict = {'key1':5, 3:7, 'key2': 'she', 9:'he'}
 1、看似无须无序实则有序  
 字典中元素的位置与存储点先后顺序无关——无序  
 字典中元素的位置由key的hash计算值决定——有序  
+2、一个字典中key不能重复，value可以重复
+3、字典会浪费比较大的内存，是一种以空间换时间的数据结构
 
 # 结构  
 1、元素结构： key: value  
@@ -92,4 +94,30 @@ dict_values([98, 78, 89])
 dict_items([('张三', 98), ('李四', 78), ('王五', 89)])
 >>> print(type(items))
 <class 'dict_items'>
+>>> print(list(items))                    # 转换之后的列表的元素是元组
+[('张三', 98), ('李四', 78), ('王五', 89)]
+```
+## 5、遍历字典
+```python
+ for cha in scores:             # cha获取的是字典中的Key
+...     print(cha, scores[cha])
+...
+张三 98
+李四 78
+王五 89
+
+for score in scores.items():
+...     print(score)
+...
+('张三', 98)
+('李四', 78)
+('王五', 89)
+```
+## 6、字典生成式
+```python
+items = ['fruits', 'books', 'others']
+>>> prices = [96, 78, 85]
+>>> dict = {item:price  for item,price in zip(items,prices)}   # zip()用于生成元组，即key-value对
+>>> print(dict)
+{'fruits': 96, 'books': 78, 'others': 85}
 ```
